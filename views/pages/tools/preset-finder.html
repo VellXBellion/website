@@ -1,0 +1,43 @@
+        <div id="toolPresetFinder" class="page-section">
+            <div class="page-hero">
+                <div class="page-hero-icon-row">
+                    <div class="page-hero-icon-wrap"><i class="fas fa-magnifying-glass"></i></div>
+                    <div><div class="page-hero-title">PRESET FINDER</div><div class="page-hero-sub">Cari preset dari link TikTok/YouTube atau kata kunci</div></div>
+                </div>
+            </div>
+            <div class="input-section">
+                <div class="input-label"><i class="fas fa-link"></i> Link TikTok / YouTube atau Kata Kunci</div>
+                <form id="presetFinderForm" class="url-form">
+                    <div class="input-group" style="flex-direction:column;gap:10px;">
+                        <input type="text" id="pfInput" class="input-field" placeholder="https://vt.tiktok.com/xxxx atau kata kunci" autocomplete="off">
+                        <button type="submit" class="submit-btn" style="width:100%;"><i class="fas fa-magnifying-glass"></i> Cari Preset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="proxy-status" id="pfProxyStatus">
+                <div style="margin-bottom:6px;color:var(--c-textSub);font-family:var(--font-mono);font-weight:700;font-size:11px;text-transform:uppercase;">CONNECTION STATUS</div>
+                <div class="proxy-status-item"><span class="proxy-dot pending" id="pfProxy0"></span> Direct</div>
+                <div class="proxy-status-item"><span class="proxy-dot pending" id="pfProxy1"></span> CORS Proxy IO</div>
+            </div>
+            <div id="pfLoader" class="loader-wrapper">
+                <div class="spinner"></div>
+                <div class="loader-text">SEARCHING PRESET...</div>
+                <div class="loader-sub">Menghubungi server, mohon tunggu</div>
+            </div>
+            <div id="pfError" class="error-message"><i class="fas fa-exclamation-triangle"></i><span id="pfErrorText"></span></div>
+            <div id="pfCandidates" style="display:none;"></div>
+            <div id="pfLinks" style="display:none;"></div>
+            <div class="result-card-inner" id="pfResult">
+                <div class="result-header">
+                    <div class="result-title"><i class="fas fa-file-code"></i> RAW RESULT</div>
+                    <div class="result-meta">
+                        <span class="result-size" id="pfSize">0 B</span>
+                        <button class="copy-btn" id="pfCopyBtn"><i class="fas fa-copy"></i> COPY</button>
+                    </div>
+                </div>
+                <div class="code-container"><div class="code-content" id="pfCodeContent"></div></div>
+            </div>
+            <div class="download-section" id="pfDownloadSection">
+                <button class="download-btn" id="pfDownloadBtn"><i class="fas fa-download"></i> Download JSON</button>
+            </div>
+        </div>

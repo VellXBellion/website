@@ -1,0 +1,82 @@
+        <div id="toolSpamTelegram" class="page-section">
+            <div class="tg-hero-banner">
+                <div class="tg-hero-icon-row">
+                    <div class="tg-hero-icon-wrap"><i class="fab fa-telegram"></i></div>
+                    <div><div class="tg-hero-title">SPAM TELEGRAM</div><div class="tg-hero-sub">Send bulk messages via Telegram Bot API</div></div>
+                </div>
+                <div class="tg-hero-stats">
+                    <div class="tg-hero-stat"><i class="fas fa-paper-plane"></i><div><div class="tg-hero-stat-val" id="tgHeroMsgCount">0</div><div class="tg-hero-stat-lbl">Sent</div></div></div>
+                    <div class="tg-hero-stat"><i class="fas fa-robot"></i><div><div class="tg-hero-stat-val" id="tgHeroBotStatus">--</div><div class="tg-hero-stat-lbl">Bot</div></div></div>
+                    <div class="tg-hero-stat"><i class="fas fa-bolt"></i><div><div class="tg-hero-stat-val" id="tgHeroSpamStatus">Idle</div><div class="tg-hero-stat-lbl">Status</div></div></div>
+                </div>
+            </div>
+            <div class="tg-status-bar">
+                <div class="tg-status-item">
+                    <i class="fas fa-paper-plane"></i>
+                    <span class="tg-status-label">Messages:</span>
+                    <span class="tg-status-value" id="tgStatusMsgCount">0</span>
+                </div>
+                <div class="tg-status-item">
+                    <i class="fas fa-robot"></i>
+                    <span class="tg-status-label">Bot:</span>
+                    <span class="tg-status-value tg-offline" id="tgStatusBot">Offline</span>
+                </div>
+            </div>
+            <div class="feature-tabs" style="margin:0 0 16px 0;">
+                <button class="feature-tab active" id="tgTabSetup" onclick="tgSwitchTab('setup')"><i class="fas fa-cog"></i> Setup</button>
+                <button class="feature-tab" id="tgTabSpam" onclick="tgSwitchTab('spam')"><i class="fas fa-bomb"></i> Spam</button>
+            </div>
+            <div id="tgPanelSetup" class="feature-panel active">
+                <div class="input-section">
+                    <div class="input-label"><i class="fab fa-telegram"></i> Bot Configuration</div>
+                    <div class="tg-input-wrapper">
+                        <label><i class="fas fa-key"></i> Bot Token</label>
+                        <input type="text" id="tgBotToken" class="tg-input-field" placeholder="Enter Telegram Bot Token">
+                        <span class="tg-input-hint">Get token from @BotFather on Telegram</span>
+                    </div>
+                    <div class="tg-input-wrapper">
+                        <label><i class="fas fa-bullseye"></i> Target Chat ID</label>
+                        <input type="text" id="tgTargetId" class="tg-input-field" placeholder="Enter Target Chat ID">
+                        <span class="tg-input-hint">Use @userinfobot to get your chat ID</span>
+                    </div>
+                    <button class="submit-btn" onclick="tgTestConnection()" id="tgTestBtn" style="width:100%;"><i class="fas fa-network-wired"></i> Test Connection</button>
+                    <button class="submit-btn submit-btn-secondary" onclick="tgSaveConfig()" style="width:100%;margin-top:8px;"><i class="fas fa-save"></i> Save Configuration</button>
+                </div>
+            </div>
+            <div id="tgPanelSpam" class="feature-panel">
+                <div class="input-section">
+                    <div class="input-label"><i class="fas fa-comment-dots"></i> Message Settings</div>
+                    <div class="tg-input-wrapper">
+                        <label><i class="fas fa-edit"></i> Message Text</label>
+                        <textarea id="tgSpamText" class="tg-input-field" placeholder="Enter your message here..." rows="3" style="min-height:80px;resize:vertical;">Hallo</textarea>
+                    </div>
+                    <div class="tg-message-preview"><span id="tgMessagePreview">Hallo</span></div>
+                    <div class="tg-control-row">
+                        <span class="tg-control-label"><i class="fas fa-hashtag"></i> Count</span>
+                        <div class="tg-control-input">
+                            <input type="range" id="tgCountRange" min="1" max="100" value="10">
+                            <input type="number" id="tgCount" class="tg-input-field" style="width:68px;padding:8px;text-align:center;" min="1" max="100" value="10">
+                        </div>
+                    </div>
+                    <div class="tg-control-row">
+                        <span class="tg-control-label"><i class="fas fa-clock"></i> Delay (ms)</span>
+                        <div class="tg-control-input">
+                            <input type="range" id="tgDelayRange" min="0" max="5000" step="100" value="0">
+                            <input type="number" id="tgDelay" class="tg-input-field" style="width:68px;padding:8px;text-align:center;" min="0" max="5000" value="0">
+                        </div>
+                    </div>
+                    <div class="tg-btn-group">
+                        <button class="submit-btn" onclick="tgStartSpam()" id="tgStartBtn"><i class="fas fa-play"></i> Start Spam</button>
+                        <button class="submit-btn tg-btn-danger" onclick="tgStopSpam()" id="tgStopBtn" style="display:none;"><i class="fas fa-stop"></i> Stop</button>
+                    </div>
+                </div>
+                <div class="input-section" style="margin-top:-8px;">
+                    <div class="input-label"><i class="fas fa-terminal"></i> Activity Log</div>
+                    <div class="tg-log-container" id="tgLogContainer"></div>
+                </div>
+            </div>
+            <div class="tg-info-banner">
+                <i class="fas fa-circle-info"></i>
+                <div class="tg-info-banner-text"><strong>Spam Telegram</strong> — Kirim pesan massal ke chat/group Telegram menggunakan Bot API.</div>
+            </div>
+        </div>

@@ -1,0 +1,362 @@
+        <!-- PAGE: DASHBOARD -->
+        <div id="pageDashboard" class="page-section active">
+
+            <!-- Brandmark -->
+            <section class="brandmark entrance">
+                <h2>4VELL GENERATOR</h2>
+                <div class="subtitle">PRIVATE COMMAND DECK</div>
+            </section>
+
+            <!-- Top Bar -->
+            <section class="topbar entrance">
+                <div class="hex"><i class="fa-solid fa-hexagon-nodes"></i></div>
+                <div class="who">
+                    <h3>GENERATOR</h3>
+                    <span>4VELL SYSTEM • SECURE SESSION</span>
+                </div>
+                <div class="live-pill">
+                    <span class="dot"></span> LIVE
+                </div>
+            </section>
+
+            <!-- Hero -->
+            <section class="hero entrance">
+                <img class="hero-img" alt="" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1400&q=80" />
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="pill-row">
+                        <div class="pill"><span class="dot"></span> NOVA DRIVE</div>
+                        <div class="spacer"></div>
+                        <span class="right">LIVE COMMAND</span>
+                    </div>
+                    <div class="eyebrow">4VELL</div>
+                    <h4>Halo, <span id="heroUser">USER</span></h4>
+                    <p>4VELL command center • semua kontrol penting dalam satu ruang.</p>
+                    <div class="metrics">
+                        <div class="metric">
+                            <i class="fa-solid fa-verified"></i>
+                            <div>
+                                <div class="lbl">ROLE</div>
+                                <div class="val" id="mRole">USER</div>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <i class="fa-solid fa-lock"></i>
+                            <div>
+                                <div class="lbl">SESSION</div>
+                                <div class="val">ACTIVE</div>
+                            </div>
+                        </div>
+                        <div class="metric">
+                            <i class="fa-solid fa-wifi"></i>
+                            <div>
+                                <div class="lbl">STATUS</div>
+                                <div class="val">ONLINE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION HEADING: QUICK ACTIONS (dipertahankan) -->
+            <div class="section-heading entrance">
+                <h5>QUICK ACTIONS</h5>
+                <span class="badge">4VELL / 06</span>
+                <span class="spacer"></span>
+                <span class="hint"><i class="fa-solid fa-arrows-left-right"></i> SWIPE</span>
+            </div>
+
+            <!-- BTC CHART (pengganti quick-actions section) -->
+            <div class="btc-chart entrance" id="btcChartMain">
+                <div class="btc-header">
+                    <div class="left">
+                        <span class="btc-icon">₿</span>
+                        <span class="btc-label">BTC/USDT</span>
+                    </div>
+                    <div class="right">
+                        <span class="change" id="btcChange" style="color:#111;">+0.00%</span>
+                        <span class="price" id="btcPrice">$118,240.34</span>
+                    </div>
+                </div>
+                <canvas id="btcCanvas" height="70"></canvas>
+                <div class="btc-details">
+                    <div class="detail"><span class="label">High</span><span class="value" id="btcHigh">$118,240</span></div>
+                    <div class="detail"><span class="label">Low</span><span class="value" id="btcLow">$118,240</span></div>
+                    <div class="detail"><span class="label">Vol</span><span class="value" id="btcVol">42,000</span></div>
+                    <div class="detail"><span class="label">Funding</span><span class="value" id="btcFunding">0.010%</span></div>
+                </div>
+            </div>
+
+            <!-- Stats Row -->
+            <section class="stats-row entrance" style="margin-top:14px;">
+                <div class="stat-card">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="lbl">ACCOUNT</div>
+                    <div class="val" id="sAccount">user</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-key"></i>
+                    <div class="lbl">ACCESS</div>
+                    <div class="val" id="sAccess">USER</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <div class="lbl">BUILD</div>
+                    <div class="val">READY</div>
+                </div>
+            </section>
+
+            <!-- Section Heading: LIVE PULSE -->
+            <div class="section-heading entrance">
+                <h5>LIVE PULSE</h5>
+                <span class="badge">MARKET</span>
+                <span class="spacer"></span>
+                <span class="hint" id="marketStatus"><i class="fa-solid fa-signal"></i> DEMO</span>
+            </div>
+
+            <!-- Market Pulse -->
+            <section class="market entrance" id="market">
+                <div class="head">
+                    <div class="ico"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="who">
+                        <div class="eyebrow">MARKET PULSE</div>
+                        <h4>Crypto • 24H movement</h4>
+                    </div>
+                    <div class="badge-live" id="marketBadge">
+                        <span class="dot"></span><span>DEMO</span>
+                    </div>
+                </div>
+                <div class="coins" id="coinList"></div>
+                <div class="foot">Data refresh otomatis • fallback aman saat jaringan tidak tersedia</div>
+            </section>
+
+            <!-- Section Heading: DEVICE CORE -->
+            <div class="section-heading entrance">
+                <h5>DEVICE CORE</h5>
+                <span class="badge">SYSTEM</span>
+            </div>
+
+            <!-- Device Hub -->
+            <section class="device-hub entrance">
+                <div class="device-rings">
+                    <div class="ring-outer"></div>
+                    <div class="ring-inner"></div>
+                    <div class="core"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                </div>
+                <div class="device-meta">
+                    <div class="eyebrow">DEVICE INTELLIGENCE</div>
+                    <h4 id="devName">Mendeteksi perangkat…</h4>
+                    <div class="sub" id="devAndroid">—</div>
+                    <div class="device-chips">
+                        <div class="device-chip">
+                            <i class="fa-solid fa-memory"></i>
+                            <div class="lbl">RAM</div>
+                            <div class="val" id="devRam">—</div>
+                        </div>
+                        <div class="device-chip">
+                            <i class="fa-solid fa-hard-drive"></i>
+                            <div class="lbl">DISK</div>
+                            <div class="val" id="devStorage">—</div>
+                        </div>
+                        <div class="device-chip">
+                            <i class="fa-solid fa-microchip"></i>
+                            <div class="lbl">SOC</div>
+                            <div class="val" id="devCpu">—</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Heading: TODAY -->
+            <div class="section-heading entrance">
+                <h5>TODAY</h5>
+                <span class="badge">OVERVIEW</span>
+            </div>
+
+            <!-- Overview -->
+            <section class="overview entrance">
+                <div class="top">
+                    <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                    <div class="who">
+                        <div class="eyebrow">WELCOME BACK <span class="dot"></span></div>
+                        <h4 id="ovUser">user</h4>
+                        <div class="role"><span id="ovRole">User</span> • generator</div>
+                    </div>
+                    <div class="status">
+                        <i class="fa-solid fa-verified"></i>
+                        <span>ACTIVE</span>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="metrics">
+                    <div class="metric-vert">
+                        <i class="fa-solid fa-clock"></i>
+                        <div class="val" id="clockTime">00:00:00</div>
+                        <div class="lbl">LOCAL TIME</div>
+                    </div>
+                    <div class="metric-vert">
+                        <i class="fa-solid fa-stopwatch"></i>
+                        <div class="val" id="accessLeft">30D 0H</div>
+                        <div class="lbl">ACCESS LEFT</div>
+                    </div>
+                    <div class="metric-vert">
+                        <i class="fa-solid fa-shield"></i>
+                        <div class="val" id="ovSession">SECURE</div>
+                        <div class="lbl">SESSION</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Heading: LIVE ACTIVITY -->
+            <div class="section-heading entrance">
+                <h5>LIVE ACTIVITY</h5>
+                <span class="badge">REALTIME</span>
+            </div>
+
+            <!-- Activity -->
+            <section class="activity entrance">
+                <h5>SYSTEM EVENTS</h5>
+                <div class="sub">Realtime workspace events</div>
+                <div id="activityList"></div>
+            </section>
+
+            <!-- Memory Bar -->
+<section class="memory-bar entrance" style="margin-top:14px;cursor:pointer;" onclick="openQRIS()">
+    <div class="mem-lamp"><i class="fa-solid fa-hand-holding-heart"></i></div>
+    <div class="mem-meta">
+        <div class="mem-title">SUPPORT • DONASI <span class="dot"></span></div>
+        <div class="mem-sub" id="memStatus">SCAN QRIS • DUKUNG DEVELOPMENT • TERIMA KASIH</div>
+    </div>
+    <button class="mem-btn" id="donateBtn" aria-label="Donasi">
+        <i class="fa-solid fa-heart"></i>
+    </button>
+    <button class="mem-btn mem-btn-2" id="donateInfoBtn" aria-label="Info Donasi"
+            onclick="event.stopPropagation(); showInfoDialog()">
+        <i class="fa-solid fa-circle-info"></i>
+    </button>
+</section>
+
+            <!-- Section Heading: TOOLS SHORTCUT -->
+            <div class="section-heading entrance">
+                <h5>QUICK TOOLS</h5>
+                <span class="badge">SHORTCUT</span>
+            </div>
+
+            <!-- Tools Shortcut (pakai tools-grid dari HTML atas, dipanggil via showToolPage) -->
+            <div class="tools-grid entrance">
+                <a class="tool-card" href="#" onclick="showToolPage('encryption'); return false;">
+                    <div class="tool-icon"><i class="fas fa-lock"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">Encryption</div>
+                        <div class="tool-desc">Encrypt & decrypt teks</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('presetfinder'); return false;">
+                    <div class="tool-icon"><i class="fas fa-magnifying-glass"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">Preset Finder</div>
+                        <div class="tool-desc">Cari preset TikTok/YouTube</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('qrgenerator'); return false;">
+                    <div class="tool-icon"><i class="fas fa-qrcode"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">QR Generator</div>
+                        <div class="tool-desc">Generate QR Code</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('iphonequote'); return false;">
+                    <div class="tool-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">iPhone Quote</div>
+                        <div class="tool-desc">Screenshot quote</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('windowsquotes'); return false;">
+                    <div class="tool-icon"><i class="fa-brands fa-windows"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">Windows Quotes</div>
+                        <div class="tool-desc">Buat quote ala dialog Windows</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('tanyaustad'); return false;">
+                    <div class="tool-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">Tanya Ustad</div>
+                        <div class="tool-desc">Tanya jawab seputar agama</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('brat'); return false;">
+                    <div class="tool-icon"><i class="fa-solid fa-font"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">BRAT Generator</div>
+                        <div class="tool-desc">Teks gaya album cover BRAT</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+                <a class="tool-card" href="#" onclick="showToolPage('sertifikat'); return false;">
+                    <div class="tool-icon"><i class="fa-solid fa-certificate"></i></div>
+                    <div class="tool-content">
+                        <div class="tool-name">Sertifikat Tolol</div>
+                        <div class="tool-desc">Sertifikat lucu dengan namamu</div>
+                    </div>
+                    <div class="tool-footer"><span class="tool-tag">READY</span><i class="fas fa-arrow-right tool-arrow"></i></div>
+                </a>
+            </div>
+
+            <!-- Info & Contact (dari HTML atas, dipertahankan) -->
+            <div class="info-card" onclick="showInfoDialog()" style="margin-top:0;">
+                <div class="info-icon"><i class="fas fa-info-circle"></i></div>
+                <div class="info-text">
+                    <h4>Info &amp; Pengumuman</h4>
+                    <p>Klik untuk melihat info terbaru</p>
+                </div>
+                <div class="chevron"><i class="fas fa-chevron-right"></i></div>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section" style="padding:0;">
+                <div class="header" style="margin-top:14px;">
+                    <div class="icon"><i class="fas fa-headset"></i></div>
+                    <h4 style="font-family:var(--font-evolve);font-size:14px;font-weight:700;letter-spacing:.5px;color:var(--c-text);text-transform:uppercase;">HUBUNGI KAMI</h4>
+                </div>
+                <div class="contact-item" onclick="window.open('https://t.me/MarvelNovaX','_blank')">
+                    <div class="contact-icon blue"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="contact-info"><h5>Developer 01</h5><p>Telegram Developer 1</p></div>
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="contact-item" onclick="window.open('https://t.me/MarvelMbut','_blank')">
+                    <div class="contact-icon blue"><i class="fab fa-telegram-plane"></i></div>
+                    <div class="contact-info"><h5>Developer 02</h5><p>Fast response via Telegram</p></div>
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>
+                <div class="contact-item" onclick="window.open('https://www.tiktok.com/itsme4vell.exe','_blank')">
+                    <div class="contact-icon red"><i class="fab fa-tiktok"></i></div>
+                    <div class="contact-info"><h5>TikTok Developer</h5><p>Content about the application</p></div>
+                    <div class="arrow"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
+
+            <!-- Background picker + logout -->
+            <div style="display:flex;gap:10px;margin-top:14px;">
+                <button class="submit-btn submit-btn-secondary" style="flex:1;" onclick="openBgPicker()">
+                    <i class="fas fa-palette"></i> BACKGROUND
+                </button>
+                <button class="submit-btn" style="flex:1;background:rgba(225,29,46,.1);color:var(--c-redSoft);border-color:rgba(225,29,46,.5);" onclick="handleLogout()">
+                    <i class="fas fa-sign-out-alt"></i> LOGOUT
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <footer class="page-footer entrance">
+                <i class="fa-solid fa-shield"></i>
+                <span>GENERATOR • 4VELL</span>
+                <strong>v10.0</strong>
+            </footer>
+        </div>

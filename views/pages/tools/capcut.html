@@ -1,0 +1,25 @@
+        <div id="toolCapCut" class="page-section">
+            <div class="page-hero">
+                <div class="page-hero-icon-row">
+                    <div class="page-hero-icon-wrap"><i class="fas fa-scissors"></i></div>
+                    <div><div class="page-hero-title">CapCut Search</div><div class="page-hero-sub">Search CapCut templates for video editing</div></div>
+                </div>
+            </div>
+            <div class="search-row">
+                <input type="text" id="ccSearchInput" placeholder="Search templates...">
+                <button class="submit-btn" style="width:auto;padding:14px 18px;" onclick="searchCapCut()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="category-chips">
+                <div class="chip active" data-q="" onclick="quickCapCut(this,'')">Trending</div>
+                <div class="chip" data-q="lyrics" onclick="quickCapCut(this,'lyrics')">Lyrics</div>
+                <div class="chip" data-q="transition" onclick="quickCapCut(this,'transition')">Transition</div>
+                <div class="chip" data-q="vlog" onclick="quickCapCut(this,'vlog')">Vlog</div>
+                <div class="chip" data-q="tiktok" onclick="quickCapCut(this,'tiktok')">TikTok</div>
+                <div class="chip" data-q="cinematic" onclick="quickCapCut(this,'cinematic')">Cinematic</div>
+            </div>
+            <a class="external-link" id="capcutLink" href="https://www.capcut.com/templates" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Open CapCut Templates Website</a>
+            <div class="loading" id="ccLoading"><div class="spinner"></div><span>Searching templates...</span></div>
+            <div class="error-msg" id="ccError"></div>
+            <div class="result-count" id="ccResultCount"></div>
+            <div id="ccTemplateResults"></div>
+        </div>

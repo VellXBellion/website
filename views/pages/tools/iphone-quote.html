@@ -1,0 +1,50 @@
+        <div id="tooliPhoneQuote" class="page-section">
+            <div class="iq-hero-banner">
+                <div class="iq-hero-icon-row">
+                    <div class="iq-hero-icon-wrap"><i class="fas fa-mobile-screen-button"></i></div>
+                    <div><div class="iq-hero-title">IPHONE QUOTE GENERATOR</div><div class="iq-hero-sub">Create fake iPhone screenshot quotes easily</div></div>
+                </div>
+                <div class="iq-hero-stats">
+                    <div class="iq-hero-stat"><i class="fas fa-bolt"></i><div><div class="iq-hero-stat-val">Fast</div><div class="iq-hero-stat-lbl">Generate</div></div></div>
+                    <div class="iq-hero-stat"><i class="fas fa-circle-check"></i><div><div class="iq-hero-stat-val">Free</div><div class="iq-hero-stat-lbl">No Limit</div></div></div>
+                    <div class="iq-hero-stat"><i class="fas fa-image"></i><div><div class="iq-hero-stat-val">HD</div><div class="iq-hero-stat-lbl">Quality</div></div></div>
+                </div>
+            </div>
+            <div class="iq-input-card">
+                <div class="iq-form-grid">
+                    <div class="iq-input-wrapper">
+                        <label class="iq-input-label"><i class="far fa-clock"></i> Time (HH:MM)</label>
+                        <input type="text" id="iqTimeInput" class="iq-input-field" placeholder="12:00">
+                    </div>
+                    <div class="iq-input-wrapper">
+                        <label class="iq-input-label"><i class="fas fa-battery-half"></i> Battery (%)</label>
+                        <input type="number" id="iqBatteryInput" class="iq-input-field" placeholder="100" min="1" max="100">
+                    </div>
+                </div>
+                <div class="iq-input-wrapper">
+                    <label class="iq-input-label"><i class="fas fa-signal"></i> Carrier</label>
+                    <input type="text" id="iqCarrierInput" class="iq-input-field" placeholder="Telkomsel">
+                </div>
+                <div class="iq-input-wrapper">
+                    <label class="iq-input-label"><i class="far fa-comment-alt"></i> Message</label>
+                    <textarea id="iqMessageInput" class="iq-input-field" placeholder="Type your quote message here..."></textarea>
+                </div>
+                <button id="iqGenerateBtn" class="iq-btn-generate"><i class="fas fa-bolt"></i> Generate Quote</button>
+                <div id="iqErrorToast" class="iq-error-toast"></div>
+            </div>
+            <div id="iqLoader" class="iq-loader-wrapper">
+                <div class="iq-spinner"></div>
+                <div class="iq-loader-text">Generating Quote...</div>
+            </div>
+            <div id="iqResultCard" class="iq-result-card">
+                <img id="iqResultImg" class="iq-result-img" alt="Generated iPhone Quote">
+                <div class="iq-action-buttons">
+                    <button id="iqDownloadBtn" class="iq-btn-download"><i class="fas fa-download"></i> Download</button>
+                    <button id="iqResetBtn" class="iq-btn-reset"><i class="fas fa-trash"></i> Reset</button>
+                </div>
+            </div>
+            <div class="iq-info-banner">
+                <i class="fas fa-circle-info"></i>
+                <div class="iq-info-banner-text"><strong>iPhone Quote Generator</strong> — Buat screenshot quote iPhone palsu dengan waktu, baterai, dan carrier kustom.</div>
+            </div>
+        </div>

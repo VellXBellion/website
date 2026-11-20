@@ -1,0 +1,121 @@
+<!-- ═══════════════════ LOGIN SECTION ═══════════════════ -->
+<div id="loginSection" class="landing-section hidden">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-circle">
+                <img src="../Logo/logo.png" alt="Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/>
+                <span class="logo-fallback" style="display:none;">4VELL</span>
+            </div>
+            <div class="brand-name">AM GENERATOR</div>
+            <div class="brand-sub">Silahkan Login</div>
+            <div class="brand-sub">Username & password bebas</div>
+        </div>
+        <div class="card">
+            <div class="nameplate-shell">
+                <svg class="nameplate-svg" viewBox="0 0 500 310" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="pG" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#FFFFFF"/>
+                            <stop offset="100%" stop-color="#F8F8F8"/>
+                        </linearGradient>
+                        <linearGradient id="bG" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#1A1A1A"/>
+                            <stop offset="100%" stop-color="#1A1A1A"/>
+                        </linearGradient>
+                    </defs>
+                    <rect x="10" y="10" width="480" height="290" rx="14" ry="14" fill="url(#pG)"/>
+                    <rect x="10" y="10" width="480" height="290" rx="14" ry="14" fill="none" stroke="url(#bG)" stroke-width="3"/>
+                    <rect x="24" y="24" width="452" height="262" rx="7" ry="7" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+                    <path d="M24,46 L24,24 L46,24" fill="none" stroke="#FFD600" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="24" cy="24" r="2" fill="#FF3B30"/>
+                    <path d="M454,24 L476,24 L476,46" fill="none" stroke="#FFD600" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="476" cy="24" r="2" fill="#FF3B30"/>
+                    <path d="M24,264 L24,286 L46,286" fill="none" stroke="#FFD600" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="24" cy="286" r="2" fill="#FF3B30"/>
+                    <path d="M454,286 L476,286 L476,264" fill="none" stroke="#FFD600" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="476" cy="286" r="2" fill="#FF3B30"/>
+                </svg>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-title">Welcome Back</div>
+                        <div class="card-subtitle">Masukan Akunmu</div>
+                    </div>
+                    <div class="card-divider">
+                        <div class="card-divider-line"></div>
+                        <div class="card-divider-diamond"></div>
+                        <div class="card-divider-line"></div>
+                    </div>
+                    <form class="card-form" id="landingLoginForm">
+                        <div class="login-input-group">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </span>
+                            <input type="text" name="username" id="landingUsernameField" placeholder="Username" autocomplete="off" required>
+                        </div>
+                        <div class="login-input-group">
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </span>
+                            <input type="password" name="key" id="landingPasswordField" placeholder="Password" autocomplete="off" required>
+                            <button type="button" class="eye-btn" id="landingEyeBtn" aria-label="Toggle password">
+                                <svg id="landingEyeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="error-toast-landing" id="landingErrorToast">
+            <div class="error-toast-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                    <line x1="12" y1="9" x2="12" y2="13"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+                <span id="landingErrorText">Invalid username or key!</span>
+            </div>
+        </div>
+        <div class="card-btn">
+            <div class="nameplate-shell nameplate-shell--btn">
+                <svg class="nameplate-svg" viewBox="0 0 500 78" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="6" width="480" height="66" rx="14" ry="14" fill="#FFD600"/>
+                    <rect x="10" y="6" width="480" height="66" rx="14" ry="14" fill="none" stroke="#1A1A1A" stroke-width="3"/>
+                    <rect x="22" y="16" width="456" height="46" rx="7" ry="7" fill="none" stroke="#1A1A1A" stroke-width="1"/>
+                    <path d="M22,30 L22,16 L36,16" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M464,16 L478,16 L478,30" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M22,48 L22,62 L36,62" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M464,62 L478,62 L478,48" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <div class="card-btn-content">
+                    <button type="button" class="btn-signin--plate" id="landingSignInBtn">
+                        <span id="landingBtnSignInText">SiGN iN</span>
+                        <svg id="landingBtnSignInArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                        <div class="btn-plate-loader" id="landingBtnLoader"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="login-footer">
+            <div class="footer-team">
+                <div class="footer-line footer-line-l"></div>
+                <span>HUTAO EDITION</span>
+                <div class="footer-line footer-line-r"></div>
+            </div>
+            <div class="footer-ver">
+                <span>v7.0.0</span><span>|</span><span>&copy; 2026</span>
+            </div>
+        </div>
+    </div>
+</div>

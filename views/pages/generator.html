@@ -1,0 +1,125 @@
+        <!-- PAGE: GENERATOR -->
+        <div id="pageGenerator" class="page-section">
+            <div class="rules-hero-banner">
+                <div class="hero-icon-row">
+                    <div class="hero-icon-wrap"><i class="fas fa-crown"></i></div>
+                    <div>
+                        <div class="hero-title">4VELL GENERATOR</div>
+                        <div class="hero-sub">Alight Motion Pro &amp; TikTok Downloader</div>
+                    </div>
+                </div>
+                <div class="page-hero-stats">
+                    <div class="page-hero-stat"><i class="fas fa-bolt"></i><div><div class="page-hero-stat-val">FAST</div><div class="page-hero-stat-lbl">Generate</div></div></div>
+                    <div class="page-hero-stat"><i class="fas fa-shield-halved"></i><div><div class="page-hero-stat-val">PRO</div><div class="page-hero-stat-lbl">Premium</div></div></div>
+                </div>
+            </div>
+
+            <div class="feature-tabs">
+                <button class="feature-tab active" id="tabAM" onclick="switchFeature('am')">Alight Motion</button>
+                <button class="feature-tab" id="tabTT" onclick="switchFeature('tt')">TikTok DL</button>
+            </div>
+
+            <div class="feature-panel active" id="panelAM">
+                <div class="input-section">
+                    <div class="input-label"><i class="fas fa-envelope"></i> Email Address</div>
+                    <div class="alert alert-error" id="alert1"></div>
+                    <div class="input-group" style="margin-bottom:12px;">
+                        <input type="email" id="email" class="input-field" placeholder="youremail@gmail.com" autocomplete="email" />
+                        <button class="submit-btn" id="btnSend" onclick="sendMagicLink()"><i class="fas fa-paper-plane"></i> Send Link</button>
+                    </div>
+                    <button class="submit-btn submit-btn-secondary" onclick="goToStep(2)" id="goToStep2Btn" style="display:none;"><i class="fas fa-arrow-right"></i> Lanjut ke Step 2</button>
+                    <div class="progress" id="progress">
+                        <span class="active" data-step="1"></span><span data-step="2"></span><span data-step="3"></span>
+                    </div>
+                    <div class="panel" id="step2" style="margin-top:16px;">
+                        <div class="step-header">
+                            <div class="step-icon">2</div>
+                            <div class="step-badge">STEP 2</div>
+                        </div>
+                        <h2 style="font-size:1.1rem;font-weight:700;font-family:var(--font-evolve);margin-bottom:4px;color:var(--ink);text-transform:uppercase;">Paste Magic Link</h2>
+                        <p style="color:var(--ink-2);font-size:12px;font-family:var(--font-mono);line-height:1.55;margin-bottom:16px;">Buka email, salin link aktivasi, tempel di bawah.</p>
+                        <div class="alert alert-success show" id="alertInfo" style="display:block;padding:14px 18px;border-radius:10px;margin-bottom:14px;font-size:12px;line-height:1.6;background:rgba(0,230,118,.08);border:1.2px solid rgba(0,230,118,.4);color:var(--c-textSub);">
+                            <i class="fas fa-info-circle"></i> Link dikirim ke <strong id="sentEmail"></strong>. Cek inbox / spam.
+                        </div>
+                        <div class="alert alert-error" id="alert2"></div>
+                        <div class="input-group" style="margin-bottom:12px;">
+                            <input type="url" id="magicUrl" class="input-field" placeholder="https://..." />
+                            <button class="submit-btn" id="btnVerif" onclick="verifyLink()"><i class="fas fa-check"></i> Verify</button>
+                        </div>
+                        <button class="submit-btn submit-btn-secondary" onclick="goToStep(1)"><i class="fas fa-arrow-left"></i> Ganti email</button>
+                        <button class="submit-btn submit-btn-secondary" onclick="cancelProcess()" style="margin-top:6px;"><i class="fas fa-times"></i> Batalkan</button>
+                    </div>
+                    <div class="panel" id="step3" style="margin-top:16px;">
+                        <div class="step-header">
+                            <div class="step-icon">✓</div>
+                            <div class="step-badge">DONE</div>
+                        </div>
+                        <h2 style="font-size:1.1rem;font-weight:700;font-family:var(--font-evolve);margin-bottom:4px;color:var(--ink);text-transform:uppercase;">Berhasil diaktifkan!</h2>
+                        <p style="color:var(--ink-2);font-size:12px;font-family:var(--font-mono);line-height:1.55;margin-bottom:16px;">Akun Alight Motion Pro sudah aktif.</p>
+                        <div class="result-card active" style="border-color:var(--border);display:block;">
+                            <div class="result-header" style="background:rgba(0,230,118,.08);">
+                                <div class="result-title" style="color:var(--success);"><i class="fas fa-check-circle"></i> Order ID</div>
+                                <div class="result-meta">
+                                    <span class="result-size" style="color:var(--success);" id="codeOrder">-</span>
+                                </div>
+                            </div>
+                            <div style="padding:14px 18px;display:flex;flex-direction:column;gap:8px;">
+                                <div style="display:flex;justify-content:space-between;align-items:center;">
+                                    <span style="font-family:var(--font-mono);font-size:10px;color:var(--c-textSub);text-transform:uppercase;letter-spacing:.5px;"><i class="fas fa-crown" style="color:var(--c-gold);margin-right:6px;"></i>Plan</span>
+                                    <span style="font-family:var(--font-evolve);font-size:12px;font-weight:700;color:var(--c-text);" id="planName">-</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;align-items:center;">
+                                    <span style="font-family:var(--font-mono);font-size:10px;color:var(--c-textSub);text-transform:uppercase;letter-spacing:.5px;"><i class="fas fa-calendar-check" style="color:var(--c-cyan);margin-right:6px;"></i>Valid Until</span>
+                                    <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--c-green);" id="validUntil">-</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="submit-btn" onclick="resetAll()" style="margin-top:12px;"><i class="fas fa-plus"></i> Buat akun lagi</button>
+                    </div>
+                </div>
+                <div class="tips">
+                    <h4><i class="fas fa-lightbulb" style="color:#FFD600;margin-right:6px;"></i> Tips</h4>
+                    <ul>
+                        <li>Gunakan email Gmail yang masih aktif</li>
+                        <li>Cek folder <strong>Spam</strong> atau <strong>Promotions</strong></li>
+                        <li>Link hanya berlaku sekitar 5 menit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-panel" id="panelTT">
+                <div class="input-section">
+                    <div class="input-label"><i class="fab fa-tiktok"></i> Link TikTok</div>
+                    <div class="mode-chips">
+                        <button class="mode-chip active" data-mode="auto" onclick="setTTMode('auto')">⚡ Auto</button>
+                        <button class="mode-chip" data-mode="mp3" onclick="setTTMode('mp3')">🎵 MP3</button>
+                    </div>
+                    <div class="alert alert-error" id="ttAlert"></div>
+                    <div class="input-group" style="margin-bottom:12px;">
+                        <input type="url" id="ttUrl" class="input-field" placeholder="https://www.tiktok.com/@user/video/..." />
+                        <button class="submit-btn" id="btnTT" onclick="downloadTikTok()"><i class="fas fa-download"></i> Download</button>
+                    </div>
+                    <div class="tt-result" id="ttResult">
+                        <div class="tt-preview">
+                            <img class="tt-thumb" id="ttThumb" src="" alt="thumbnail" />
+                            <div class="tt-meta">
+                                <div class="tt-title" id="ttTitle">-</div>
+                                <div class="tt-author" id="ttAuthor">-</div>
+                                <div class="tt-info" id="ttInfo">-</div>
+                                <div class="tt-type-badge" id="ttTypeBadge">VIDEO</div>
+                            </div>
+                        </div>
+                        <div id="ttBody"></div>
+                    </div>
+                </div>
+                <div class="tips">
+                    <h4><i class="fas fa-heart" style="color:#FF6B9D;margin-right:6px;"></i> Tips</h4>
+                    <ul>
+                        <li>Support <strong>Developer</strong> agar tetap semangat</li>
+                        <li>Klik tombol → file langsung terdownload</li>
+                        <li>Support link pendek vt / vm.tiktok.com</li>
+                        <li>Mode <strong>MP3</strong> untuk ekstrak audio saja</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
